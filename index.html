@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benexx Kitchen & Housewares Wholesale</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: "Times New Roman", serif; background:#fff; color:#333; }
+
+/* HEADER - Navy + Tiniest Dropdown */
+header { 
+  background:#0f172a; 
+  padding:12px 5%; 
+  position:sticky; top:0; z-index:100;
+  display:flex; justify-content:space-between; align-items:center;
+}
+.logo { color:#fff; font-size:18px; font-weight:700; letter-spacing:1px; }
+nav a { color:#cbd5e1; text-decoration:none; margin:0 12px; font-size:14px; }
+.lang-dropdown { 
+  background:transparent; border:1px solid #64748b; color:#fff; 
+  font-size:11px; padding:3px 5px; border-radius:6px; 
+  font-family: "Times New Roman", serif; cursor:pointer;
+}
+
+/* HERO - Gradient like screenshot */
+.hero { 
+  background:linear-gradient(135deg,#8b5cf6 0%,#ec4899 50%,#06b6d4 100%); 
+  padding:70px 5%; text-align:center; color:#fff;
+}
+.hero h1 { font-size:28px; margin-bottom:12px; font-weight:700; }
+.hero p { font-size:16px; margin-bottom:25px; opacity:0.95; }
+.btn { 
+  display:inline-block; padding:14px 30px; border-radius:6px; 
+  text-decoration:none; font-weight:700; font-family: "Times New Roman", serif;
+}
+.btn-whatsapp { background:#25D366; color:white; }
+
+/* CATEGORY GRID - 2 per row like screenshot */
+.section { padding:50px 5%; }
+.section h2 { text-align:center; margin-bottom:35px; color:#0f172a; font-size:24px; }
+.cat-grid { 
+  display:grid; grid-template-columns:repeat(2, 1fr); gap:15px; max-width:600px; margin:0 auto;
+}
+.cat-card { 
+  background:#fff; border:1px solid #e2e8f0; border-radius:6px; 
+  text-align:center; padding:15px; cursor:pointer; transition:0.2s;
+}
+.cat-card:hover { transform:translateY(-3px); box-shadow:0 6px 16px rgba(0,0,0,0.1); }
+.cat-card img { width:100%; height:140px; object-fit:cover; border-radius:6px; background:#f1f5f9; }
+.cat-card p { margin-top:10px; font-weight:600; color:#0f172a; font-size:15px; }
+
+/* WHY CHOOSE */
+.features { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; text-align:center; margin-top:30px; }
+.feature { padding:15px; }
+.feature-icon { font-size:28px; margin-bottom:8px; }
+
+/* TESTIMONIALS */
+.test-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:30px; }
+.test-card { 
+  background:#f8fafc; padding:20px; border-radius:6px; border-left:3px solid #d4af37;
+  font-size:14px; font-style:italic; color:#475569;
+}
+.test-card strong { display:block; margin-top:10px; font-style:normal; color:#0f172a; }
+
+/* ABOUT */
+.about { background:#f8fafc; padding:50px 5%; text-align:center; }
+.about p { max-width:700px; margin:20px auto; color:#475569; line-height:1.7; }
+.btn-secondary { background:#d4af37; color:#0f172a; margin-top:15px; }
+
+/* FINAL CTA */
+.cta { 
+  background:linear-gradient(135deg,#06b6d4 0%,#8b5cf6 100%); 
+  padding:60px 5%; text-align:center; color:#fff;
+}
+.cta h2 { font-size:24px; margin-bottom:20px; }
+
+footer { background:#0f172a; color:#94a3b8; padding:30px 5%; text-align:center; font-size:14px; }
+.whatsapp-float { 
+  position:fixed; bottom:20px; right:20px; background:#25D366; color:white; 
+  width:55px; height:55px; border-radius:50%; display:flex; align-items:center; justify-content:center; 
+  font-size:28px; text-decoration:none; box-shadow:0 4px 12px rgba(0,0,0,0.3); z-index:999;
+}
+
+@media(max-width:768px){ 
+  .features{grid-template-columns:repeat(2,1fr)} 
+  .test-grid{grid-template-columns:1fr} 
+  nav a{display:none} 
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">BENEXX</div>
+  <nav>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="https://wa.me/2348030000">WhatsApp</a>
+    <select class="lang-dropdown" onchange="setLang(this.value)">
+      <option>EN ▼</option>
+      <option>HA</option>
+      <option>FR</option>
+    </select>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1 data-en="Kitchen & Housewares Wholesale" data-ha="Kasuwancin Kayan Dafa Abinci" data-fr="Vente de Cuisine & Maison">Kitchen & Housewares Wholesale</h1>
+  <p data-en="Bulk deals for dealers. Best prices guaranteed." data-ha="Farashi mai araha ga masu kasuwanci" data-fr="Prix de gros pour revendeurs">Bulk deals for dealers. Best prices guaranteed.</p>
+  <a href="https://wa.me/2348030000?text=Hello%20Benexx%2C%20I%20want%20to%20order" class="btn btn-whatsapp">ORDER ON WHATSAPP</a>
+</section>
+
+<section class="section" id="shop">
+  <h2>Shop By Category</h2>
+  <div class="cat-grid">
+    <div class="cat-card">
+      <img src="https://via.placeholder.com/300x140" alt="Food Flasks">
+      <p>FOOD FLASKS</p>
+    </div>
+    <div class="cat-card">
+      <img src="https://via.placeholder.com/300x140" alt="Tea Flasks">
+      <p>TEA FLASKS</p>
+    </div>
+    <div class="cat-card">
+      <img src="https://via.placeholder.com/300x140" alt="Pots">
+      <p>POTS</p>
+    </div>
+    <div class="cat-card">
+      <img src="https://via.placeholder.com/300x140" alt="Electrical">
+      <p>ELECTRICAL</p>
+    </div>
+    <div class="cat-card">
+      <img src="https://via.placeholder.com/300x140" alt="Cutlery">
+      <p>CUTLERY</p>
+    </div>
+    <div class="cat-card">
+      <img src="https://via.placeholder.com/300x140" alt="Plates & Bowls">
+      <p>PLATES & BOWLS</p>
+    </div>
+    <div class="cat-card">
+      <img src="https://via.placeholder.com/300x140" alt="Containers">
+      <p>CONTAINERS</p>
+    </div>
+    <div class="cat-card">
+      <img src="https://via.placeholder.com/300x140" alt="Others">
+      <p>OTHERS</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Why Choose Benexx</h2>
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">💰</div>
+      <p>Wholesale Prices</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📦</div>
+      <p>Bulk Supply</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">✓</div>
+      <p>Quality</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🌍</div>
+      <p>Fast Delivery</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>What Dealers Say</h2>
+  <div class="test-grid">
+    <div class="test-card">
+      "Best wholesale prices. Bulk orders always complete."
+      <strong>- Retailer, Kano</strong>
+    </div>
+    <div class="test-card">
+      "Quality flasks and pots. Customers always return."
+      <strong>- Dealer, Niger Republic</strong>
+    </div>
+    <div class="test-card">
+      "Fast delivery service. Benexx never disappoint."
+      <strong>- Bulk Buyer, Chad</strong>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>About Benexx</h2>
+  <p>Benexx Kitchen & Housewares is your trusted wholesale partner for premium kitchen and household products. We supply retailers and dealers worldwide with durable Food Flasks, Tea Flasks, Pots, Electrical Appliances, Cutlery, Knives, Plates, Bowls, Containers & more.</p>
+  <a href="#shop" class="btn btn-secondary">LEARN MORE</a>
+</section>
+
+<section class="cta">
+  <h2>Ready To Stock Your Shop?</h2>
+  <a href="https://wa.me/2348030000" class="btn btn-whatsapp">CHAT US ON WHATSAPP</a>
+</section>
+
+<footer>
+  © 2026 Benexx Kitchen & Housewares. Abuja, Nigeria | WhatsApp: 0803 000 0000
+</footer>
+
+<a href="https://wa.me/2348030000" class="whatsapp-float">💬</a>
+
+<script>
+function setLang(lang){
+  document.querySelectorAll('[data-en]').forEach(el=>{
+    el.textContent = el.getAttribute('data-'+lang);
+  });
+}
+</script>
+
+</body>
+</html>
