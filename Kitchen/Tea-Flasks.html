@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tea Flasks - Benexx</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial; margin:0; background:#f4f9e9; } /* Lemon green background */
+    h1 { text-align:center; padding:20px; background:linear-gradient(90deg,#c8e6a0,#7ecb7e); color:#1a3c1a; margin:0; } /* Lemon green gradient */
+    .back { display:block; text-align:center; padding:10px; background:#2e5c2e; color:white; text-decoration:none; } /* Darker green */
+    #products { display:grid; grid-template-columns:repeat(auto-fill, minmax(180px, 1fr)); gap:15px; padding:20px; }
+    .card { background:white; border-radius:10px; padding:10px; text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.1); border: 1px solid #dcedc8; }
+    .card img { width:100%; height:160px; object-fit:cover; border-radius:8px; }
+    .card h3 { font-size:14px; margin:8px 0 4px; color:#2e5c2e; }
+    .price { color:#d62828; font-weight:bold; }
+    .btn { display:block; background:#25D366; color:white; padding:8px; border-radius:5px; text-decoration:none; margin-top:6px; font-size:13px; }
+  </style>
+</head>
+<body>
+  <h1>Tea Flasks</h1>
+  <a href="index.html" class="back">← Back to Categories</a>
+  
+  <div id="products">
+    <!-- Replace image src with your tea flask pictures -->
+    <div class="card">
+      <img src="images/royal-tea.jpg" alt="Royal Tea Flask 1L">
+      <h3>Royal Tea Flask 1L</h3>
+      <div class="price">₦6,500</div>
+      <a href="https://wa.me/234XXXXXXXXXX?text=Hi Benexx, I want Royal Tea Flask 1L" class="btn" target="_blank">Order WhatsApp</a>
+    </div>
+    
+    <div class="card">
+      <img src="images/premium-tea.jpg" alt="Premium Tea Flask 1.5L">
+      <h3>Premium Tea Flask 1.5L</h3>
+      <div class="price">₦7,800</div>
+      <a href="https://wa.me/234XXXXXXXXXX?text=Hi Benexx, I want Premium Tea Flask 1.5L" class="btn" target="_blank">Order WhatsApp</a>
+    </div>
+    
+    <div class="card">
+      <img src="images/classic-tea.jpg" alt="Classic Tea Flask 1L">
+      <h3>Classic Tea Flask 1L</h3>
+      <div class="price">₦6,000</div>
+      <a href="https://wa.me/234XXXXXXXXXX?text=Hi Benexx, I want Classic Tea Flask 1L" class="btn" target="_blank">Order WhatsApp</a>
+    </div>
+  </div>
+</body>
+</html>
