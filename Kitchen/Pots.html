@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pots - Benexx</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial; margin:0; background:#f7ede2; } /* Warm cream/copper background */
+    h1 { text-align:center; padding:20px; background:linear-gradient(90deg,#b85c38,#d97a2b); color:white; margin:0; } /* Copper/orange gradient */
+    .back { display:block; text-align:center; padding:10px; background:#5c2e1a; color:white; text-decoration:none; } /* Dark brown */
+    #products { display:grid; grid-template-columns:repeat(auto-fill, minmax(180px, 1fr)); gap:15px; padding:20px; }
+    .card { background:white; border-radius:10px; padding:10px; text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.1); border: 1px solid #e8cfc2; }
+    .card img { width:100%; height:160px; object-fit:cover; border-radius:8px; }
+    .card h3 { font-size:14px; margin:8px 0 4px; color:#5c2e1a; }
+    .price { color:#d62828; font-weight:bold; }
+    .btn { display:block; background:#25D366; color:white; padding:8px; border-radius:5px; text-decoration:none; margin-top:6px; font-size:13px; }
+  </style>
+</head>
+<body>
+  <h1>Pots</h1>
+  <a href="index.html" class="back">← Back to Categories</a>
+  
+  <div id="products">
+    <!-- Replace image src with your pot pictures -->
+    <div class="card">
+      <img src="images/nonstick-set.jpg" alt="Non-Stick Pot Set 5pcs">
+      <h3>Non-Stick Pot Set 5pcs</h3>
+      <div class="price">₦18,500</div>
+      <a href="https://wa.me/234XXXXXXXXXX?text=Hi Benexx, I want Non-Stick Pot Set 5pcs" class="btn" target="_blank">Order WhatsApp</a>
+    </div>
+    
+    <div class="card">
+      <img src="images/stainless-pot.jpg" alt="Stainless Pot 3L">
+      <h3>Stainless Pot 3L</h3>
+      <div class="price">₦12,200</div>
+      <a href="https://wa.me/234XXXXXXXXXX?text=Hi Benexx, I want Stainless Pot 3L" class="btn" target="_blank">Order WhatsApp</a>
+    </div>
+    
+    <div class="card">
+      <img src="images/castiron-pot.jpg" alt="Cast Iron Pot 4L">
+      <h3>Cast Iron Pot 4L</h3>
+      <div class="price">₦15,000</div>
+      <a href="https://wa.me/234XXXXXXXXXX?text=Hi Benexx, I want Cast Iron Pot 4L" class="btn" target="_blank">Order WhatsApp</a>
+    </div>
+  </div>
+</body>
+</html>
