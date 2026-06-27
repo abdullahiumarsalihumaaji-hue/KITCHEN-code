@@ -97,10 +97,12 @@ footer { background:#0f172a; color:#94a3b8; padding:30px 5%; text-align:center; 
     <a href="#shop">Shop</a>
     <a href="#about">About</a>
     <a href="https://wa.me/2348167812779">WhatsApp</a>
-    <select class="lang-dropdown" onchange="setLang(this.value)">
-      <option>EN ▼</option>
-      <option>HA</option>
-      <option>FR</option>
+
+      <select class="lang-dropdown" onchange="setLang(this.value)">
+  <option value="en">EN ▼</option>  <-- add value="en"
+  <option value="ha">HA</option>     <-- add value="ha" 
+  <option value="fr">FR</option>     <-- add value="fr"
+  </select>
     </select>
   </nav>
 </header>
