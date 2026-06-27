@@ -3,38 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Benexx Kitchen Emporium</title>
+<title>Benexx Kitchen Store</title>
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: "Times New Roman", serif; background:#fff; color:#333; }
+body{margin:0;font-family:Arial,sans-serif;background:#f7f7f7;color:#222}
+header{background:#2e5c2e;color:#fff;padding:12px 20px;position:sticky;top:0;z-index:10;display:flex;align-items:center}
+.logo{font-size:22px;font-weight:700}
+nav{display:flex;gap:18px;align-items:center;width:100%}
+nav a{color:#fff;text-decoration:none;font-weight:500}
+.lang-dropdown{margin-left:auto;padding:6px 10px;border-radius:6px;border:0;font-weight:600}
+.hero{background:#e9f5e9;text-align:center;padding:60px 20px}
+.hero h1{font-size:32px;margin:0 0 10px}
+.btn{display:inline-block;background:#2e5c2e;color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;margin-top:12px}
+.btn-secondary{background:#555}
+.section{padding:50px 20px;max-width:1100px;margin:auto}
+.section h2{text-align:center;margin-bottom:30px}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cat-card{background:#fff;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.1);overflow:hidden;text-align:center;transition:.2s}
+.cat-card:hover{transform:translateY(-4px)}
+.cat-card img{width:100%;height:180px;object-fit:cover}
+.cat-card p{padding:12px;font-weight:700;margin:0}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.feature{background:#fff;padding:20px;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+.feature-icon{font-size:28px;margin-bottom:8px}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.test-card{background:#fff;padding:20px;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.1);font-style:italic}
+.test-card strong{display:block;margin-top:10px;font-style:normal}
+@media(max-width:768px){
+.cat-grid,.features,.test-grid{grid-template-columns:repeat(2,1fr)}
+ nav a{display:none}
+@media(max-width:500px){
+.cat-grid,.features,.test-grid{grid-template-columns:1fr}
+</style>
+</head>
+<body>
 
-/* HEADER - Navy + Tiniest Dropdown */
-header { 
-  background:#0f172a; 
-  padding:12px 5%; 
-  position:sticky; top:0; z-index:100;
-  display:flex; justify-content:space-between; align-items:center;
-}
-.logo { color:#fff; font-size:18px; font-weight:700; letter-spacing:1px; }
-nav a { color:#cbd5e1; text-decoration:none; margin:0 12px; font-size:14px; }
-.lang-dropdown { 
-  background:transparent; border:1px solid #64748b; color:#fff; 
-  font-size:11px; padding:3px 5px; border-radius:6px; 
-  font-family: "Times New Roman", serif; cursor:pointer;
+<header>
+  <div class="logo">BENEXX</div>
+  <nav>
+    <a href="#shop" data-en="Shop" data-ha="Shago" data-fr="Boutique">Shop</a>
+    <a href="#about" data-en="About" data-ha="Game da" data-fr="À propos">About</a>
+    <a href="https://wa.me/2348167812779" data-en="WhatsApp" data-ha="WhatsApp" data-fr="WhatsApp">WhatsApp</a>
+    
+    <select class="lang-dropdown" onchange="setLang(this.value)">
+      <option value="en">EN ▼</option>
+      <option value="ha">HA</option>
+      <option value="fr">FR</option>
+    </select>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1 id="hero-title" data-en="Kitchen & Housewares Wholesale" data-ha="Kayayyakin Gida da Kicin Wholesale" data-fr="Vente en Gros Cuisine & Maison">Kitchen & Housewares Wholesale</h1>
+  <p id="hero-sub" data-en="Bulk deals for dealers. Best prices guaranteed." data-ha="Kyaututtuka masu yawa ga dillalai. Farashi mafi kyau." data-fr="Offres en gros pour les revendeurs. Meilleurs prix garantis.">Bulk deals for dealers. Best prices guaranteed.</p>
+  <a href="https://wa.me/2348167812779?text=Hello%20Benexx" class="btn" id="hero-btn" data-en="Chat on WhatsApp" data-ha="Yi magana a WhatsApp" data-fr="Discuter sur WhatsApp">Chat on WhatsApp</a>
+</section>
+
+<section class="section" id="shop">
+  <h2 id="shop-title" data-en="Shop By Category" data-ha="Shago ta Kashi" data-fr="Boutique par Catégorie">Shop By Category</h2>
+  <div class="cat-grid">
+    <a href="Kitchen/Food-Warmer.html" style="text-decoration:none;color:inherit"><div class="cat-card"><img src="img/food.jpg" alt=""><p id="food">FOOD WARMERS</p></div></a>
+    <a href="Kitchen/Tea-Flask.html" style="text-decoration:none;color:inherit"><div class="cat-card"><img src="img/tea.jpg" alt=""><p id="tea">TEA FLASKS</p></div></a>
+    <a href="Kitchen/Pots.html" style="text-decoration:none;color:inherit"><div class="cat-card"><img src="img/pots.jpg" alt=""><p id="pots">POTS</p></div></a>
+    <a href="Kitchen/Electrical.html" style="text-decoration:none;color:inherit"><div class="cat-card"><img src="img/elec.jpg" alt=""><p id="elec">ELECTRICAL</p></div></a>
+    <a href="Kitchen/Gas-Cooker.html" style="text-decoration:none;color:inherit"><div class="cat-card"><img src="img/gas.jpg" alt=""><p id="gas">GAS COOKERS</p></div></a>
+    <a href="Kitchen/Cutlery.html" style="text-decoration:none;color:inherit"><div class="cat-card"><img src="img/cut.jpg" alt=""><p id="cut">CUTLERY</p></div></a>
+    <a href="Kitchen/Plates.html" style="text-decoration:none;color:inherit"><div class="cat-card"><img src="img/plate.jpg" alt=""><p id="plate">PLATES & BOWLS</p></div></a>
+    <a href="Kitchen/Containers.html" style="text-decoration:none;color:inherit"><div class="cat-card"><img src="img/cont.jpg" alt=""><p id="cont">CONTAINERS</p></div></a>
+    <a href="Kitchen/Others.html" style="text-decoration:none;color:inherit"><div class="cat-card"><img src="img/other.jpg" alt=""><p id="other">OTHERS</p></div></a>
+  </div>
+</section>
+
+<-- WHY CHOOSE BENEXX SECTION -->
+<section class="section">
+  <h2 id="why-title" data-en="Why Choose Benexx" data-ha="Me yasa Benexx" data-fr="Pourquoi Choisir Benexx">Why Choose Benexx</h2>
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">💰</div>
+      <p id="f1" data-en="Wholesale Prices" data-ha="Farashi na Wholesale" data-fr="Prix de Gros">Wholesale Prices</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📦</div>
+      <p id="f2" data-en="Bulk Supply" data-ha="Samarwa da Yawa" data-fr="Approvisionnement en Vrac">Bulk Supply</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">✓</div>
+      <p id="f3" data-en="Quality" data-ha="Inganci" data-fr="Qualité">Quality</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🌍</div>
+      <p id="f4" data-en="Fast Delivery" data-ha="Isarwa cikin Sauri" data-fr="Livraison Rapide">Fast Delivery</p>
+    </div>
+  </div>
+</section>
+
+<-- WHAT DEALERS SAY SECTION -->
+<section class="section">
+  <h2 id="test-title" data-en="What Dealers Say" data-ha="Abin da Dillalai ke cewa" data-fr="Ce que Disent les Revendeurs">What Dealers Say</h2>
+  <div class="test-grid">
+    <div class="test-card">
+      "<span id="t1" data-en="Best wholesale prices. Bulk orders always on time." data-ha="Mafi kyawun farashi na wholesale. Umarni masu yawa koyaushe suna kan lokaci." data-fr="Meilleurs prix de gros. Les commandes en gros toujours à l'heure.">Best wholesale prices. Bulk orders always on time.</span>"
+      <strong id="t1n" data-en="- Retailer, Kano" data-ha="- Dillali, Kano" data-fr="- Revendeur, Kano">- Retailer, Kano</strong>
+    </div>
+    <div class="test-card">
+      "<span id="t2" data-en="Quality flasks and pots. Customers always happy." data-ha="Ingantattun flask da tukwuni. Abokan ciniki koyaushe suna farin ciki." data-fr="Thermos et casseroles de qualité. Les clients toujours satisfaits.">Quality flasks and pots. Customers always happy.</span>"
+      <strong id="t2n" data-en="- Dealer, Niger Republic" data-ha="- Dillali, Jamhuriyar Nijar" data-fr="- Revendeur, Niger">- Dealer, Niger Republic</strong>
+    </div>
+    <div class="test-card">
+      "<span id="t3" data-en="Fast delivery service. Benexx never disappoints." data-ha="Sabis na isarwa cikin sauri. Benexx ba ya takaici." data-fr="Service de livraison rapide. Benexx ne déçoit jamais.">Fast delivery service. Benexx never disappoints.</span>"
+      <strong id="t3n" data-en="- Bulk Buyer, Chad" data-ha="- Mai sayen kaya da yawa, Chadi" data-fr="- Acheteur en Gros, Tchad">- Bulk Buyer, Chad</strong>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <h2 id="about-title" data-en="About Benexx" data-ha="Game da Benexx" data-fr="À propos de Benexx">About Benexx</h2>
+  <p id="about-text" data-en="Benexx Kitchen & Housewares is your trusted wholesale supplier." data-ha="Benexx Kitchen & Housewares shine amintaccen mai samar da kayayyaki da yawa." data-fr="Benexx Kitchen & Housewares est votre fournisseur de gros de confiance.">Benexx Kitchen & Housewares is your trusted wholesale supplier.</p>
+  <a href="#shop" class="btn btn-secondary" id="about-btn" data-en="LEARN MORE" data-ha="KARA SANI" data-fr="EN SAVOIR PLUS">LEARN MORE</a>
+</section>
+
+<script>
+const lang = {
+  en: { food:"FOOD WARMERS", tea:"TEA FLASKS", pots:"POTS", elec:"ELECTRICAL", gas:"GAS COOKERS", cut:"CUTLERY", plate:"PLATES & BOWLS", cont:"CONTAINERS", other:"OTHERS" },
+  ha: { food:"MASU DUMI", tea:"FLASK", pots:"TUKWUNI", elec:"NA WUTA", gas:"GAS", cut:"WUKAKE", plate:"PLATO & KWANO", cont:"KWANTENA", other:"SAURAN SU" },
+  fr: { food:"RÉCHAUDS", tea:"THERMOSES", pots:"CASSEROLES", elec:"ÉLECTRIQUE", gas:"CUISINIÈRES GAZ", cut:"COUVERTS", plate:"ASSIETTES & BOLS", cont:"BOÎTES", other:"AUTRES" }
+};
+
+function setLang(l){
+  localStorage.setItem('lang', l);
+  for(const key in lang[l]){
+    const el = document.getElementById(key);
+    if(el) el.textContent = lang[l][key];
+  }
+  document.querySelectorAll('[data-en]').forEach(el=>{
+    el.textContent = el.getAttribute('data-' + l);
+  });
 }
 
-/* HERO - Gradient*/
-.hero { 
-  background:linear-gradient(135deg,#8b5cf6 0%,#ec4899 50%,#06b6d4 100%); 
-  padding:70px 5%; text-align:center; color:#fff;
-}
-.hero h1 { font-size:28px; margin-bottom:12px; font-weight:700; }
-.hero p { font-size:16px; margin-bottom:25px; opacity:0.95; }
-.btn { 
-  display:inline-block; padding:14px 30px; border-radius:6px; 
-  text-decoration:none; font-weight:700; font-family: "Times New Roman", serif;
-}
-.btn-whatsapp { background:#25D366; color:white; }
+document.addEventListener('DOMContentLoaded', ()=>{
+  const saved = localStorage.getItem('lang') || 'en';
+  document.querySelector('.lang-dropdown').value = saved;
+  setLang(saved);
+});
+</script>
+
+</body>
+</html>.btn-whatsapp { background:#25D366; color:white; }
 
 /*CATEGORY GRID - 2 per row*/
 .section { padding:50px 5%; }
