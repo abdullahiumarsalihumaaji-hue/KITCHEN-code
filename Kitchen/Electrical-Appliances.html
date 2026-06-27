@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Electrical Appliances - Benexx</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial; margin:0; background:#e8f0fe; } /* Soft electric blue background */
+    h1 { text-align:center; padding:20px; background:linear-gradient(90deg,#3a7bd5,#3acfd5); color:white; margin:0; } /* Blue gradient */
+    .back { display:block; text-align:center; padding:10px; background:#1a3c6e; color:white; text-decoration:none; } /* Dark navy */
+    #products { display:grid; grid-template-columns:repeat(auto-fill, minmax(180px, 1fr)); gap:15px; padding:20px; }
+    .card { background:white; border-radius:10px; padding:10px; text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.1); border: 1px solid #cfe2ff; }
+    .card img { width:100%; height:160px; object-fit:cover; border-radius:8px; }
+    .card h3 { font-size:14px; margin:8px 0 4px; color:#1a3c6e; }
+    .price { color:#d62828; font-weight:bold; }
+    .btn { display:block; background:#25D366; color:white; padding:8px; border-radius:5px; text-decoration:none; margin-top:6px; font-size:13px; }
+  </style>
+</head>
+<body>
+  <h1>Electrical Appliances</h1>
+  <a href="index.html" class="back">← Back to Categories</a>
+  
+  <div id="products">
+    <!-- Replace image src with your appliance pictures -->
+    <div class="card">
+      <img src="images/blender.jpg" alt="High Speed Blender 2L">
+      <h3>High Speed Blender 2L</h3>
+      <div class="price">₦22,000</div>
+      <a href="https://wa.me/234XXXXXXXXXX?text=Hi Benexx, I want High Speed Blender 2L" class="btn" target="_blank">Order WhatsApp</a>
+    </div>
+    
+    <div class="card">
+      <img src="images/microwave.jpg" alt="Microwave Oven 20L">
+      <h3>Microwave Oven 20L</h3>
+      <div class="price">₦45,500</div>
+      <a href="https://wa.me/234XXXXXXXXXX?text=Hi Benexx, I want Microwave Oven 20L" class="btn" target="_blank">Order WhatsApp</a>
+    </div>
+    
+    <div class="card">
+      <img src="images/airfryer.jpg" alt="Air Fryer 5L">
+      <h3>Air Fryer 5L</h3>
+      <div class="price">₦38,000</div>
+      <a href="https://wa.me/234XXXXXXXXXX?text=Hi Benexx, I want Air Fryer 5L" class="btn" target="_blank">Order WhatsApp</a>
+    </div>
+  </div>
+</body>
+</html>
